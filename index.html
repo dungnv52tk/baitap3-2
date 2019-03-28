@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng tính số ngày trong tháng</title>
+</head>
+<body>
+<p>Nhập vào tháng</p>
+<form>
+    <input id="month" type="text">
+    <button onclick="nhapThang()">Tính số ngày</button>
+</form>
+<script>
+    function nhapThang() {
+        let thang = parseInt(document.getElementById("month").value);
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.write("Tháng " + thang + " có 31 ngày");
+                break;
+            case 4:
+            case 9:
+            case 11:
+            case 6:
+                document.write("Tháng " + thang + " có 30 ngày");
+                break;
+            case 2:
+                document.write("Tháng 2 có 28 hoặc 29 ngày");
+                break;
+            default:
+                document.write("Bạn nhập sai tháng");
+        }
+    }
+</script>
+</body>
+</html>
